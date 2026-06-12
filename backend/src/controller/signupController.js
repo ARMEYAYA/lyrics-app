@@ -1,75 +1,63 @@
 import express from "express";
-import bcrypt from "brcypt";
+import bcrypt from "bcrypt";
 
-//model
-import User from "User.js";
+import User from "../model/User.js";
 
-const signUp = () => {
-    const {email, password} = req.body;
-    email = email.trim();
-    password = password.trim();
 
-    // check if theres no empty inputs
-    if(email == "" ||  password == ""){
-        res.json({
-            status: "FAILED",
-            message: "Empty input fields!"
-        })
-    // check if the input is email format
-    }else if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
-        res.json({
-            status: "FAILED",
-            message: "Invalid Email entered"
-        })
-    }else if(password.length < 8){
-        res.json({
-            status: "FAILED",
-            message: "Password is to short!"
-        })
-    }else(
-        // check for existing user
-        User.fine({email}).then(result => {
-            // a user already exists
-            if(result){
-                res.json({
-                status: "FAILED",
-                message: "User with the provided email already exists"
-                });
-            }else{
-                // create new user
+    const signUp = async (res, req) => {
+        try{
+        const {email, password} = req.body;
+        email = email.trim();
+        password = password.trim();
 
-                const saltRounds = 10;
-                bcrypt.hash(password, saltRounds).then(hashedPassword => {
-                    const newUser = new User({
-                        email,
-                        password: hashedPassword
-                    })
-
-                    newUser.save().then(result => {
-                        res.json({
-                            status: "SUCCESS",
-                            message: "Signup successful",
-                            data: result
-                        })
-                    }).catch(err => {
-                        res.json({
-                            status: "FAILED",
-                            message: "An occurred while saving user account!"
-                        })
-                    })
-                }).catch(err => {
-                    res.json({
-                        status: "FAILED",
-                        message: "An occurred while hashing Password"
-                    })
-                })
-            };
-        }).catch(err => {
-            console.log(err)
+        if(email == "" || password == ""){
             res.json({
                 status: "FAILED",
-                message: "An error is accurred while checking for existing user!"
-            });
-        })
-    )
-};
+                message: "Theres and empty field!"
+            })
+        }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.text(email)){
+            res.json({
+                status: "FAILED",
+                message: "Email is not valid!"
+            })
+        }else if(password > 8){
+            res.json({
+            status: "FAILED",
+            message: "Password is weak, should be higher than 8 character"
+            })
+
+        }else{
+           const isExists = await User.find();
+
+           if(isExists){
+                res.json({
+                    status: "FAILED",
+                    message: "The user already exists"
+                })
+           }else{
+                const hashedPassword = await bcrypt.hash(password, 10);
+                
+                const newUser = new User({
+                    email,
+                    password: hashedPassword
+                })
+
+                const savedUser = await newUser.save();
+
+                res.json({
+                    status: "SUCCESS",
+                    message: "Signup successfully",
+                    data: savedUser
+                })
+
+           }
+        }
+        }catch(err){
+            console.log(err);
+
+            res.json({
+                status: "FAILED",
+                message: "Server error during signup"
+            })
+        }
+    }
