@@ -4,30 +4,29 @@ import bcrypt from "bcrypt";
 import User from "../model/User.js";
 
 
-    const signUp = async (res, req) => {
+export const signUp = async (req, res) => {
         try{
-        const {email, password} = req.body;
+        let {email, password} = req.body;
         email = email.trim();
         password = password.trim();
 
         if(email == "" || password == ""){
             res.json({
                 status: "FAILED",
-                message: "Theres and empty field!"
+                message: "Theres an empty field!"
             })
-        }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.text(email)){
+        }else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
             res.json({
                 status: "FAILED",
                 message: "Email is not valid!"
             })
-        }else if(password > 8){
+        }else if(password.length > 8){
             res.json({
             status: "FAILED",
             message: "Password is weak, should be higher than 8 character"
             })
-
         }else{
-           const isExists = await User.find();
+           const isExists = await User.findOne({ email });
 
            if(isExists){
                 res.json({
@@ -61,3 +60,4 @@ import User from "../model/User.js";
             })
         }
     }
+

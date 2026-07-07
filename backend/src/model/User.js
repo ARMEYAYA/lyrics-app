@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
     email: {
@@ -6,15 +6,14 @@ const userSchema = mongoose.Schema({
         required: true,
         unique: true,
         lowercase: true
-
     },
-    password:{
+    password: {
         type: String,
         required: true,
-        minLength: 9
+        minlength: 6
     }
 });
 
-const User = mongoose.model('user', userSchema);
+const User = mongoose.model("User", userSchema);
 
 export default User;
