@@ -9,4 +9,4 @@ const churchSchema = mongoose.Schema({
 
 const Church = mongoose.model("Church", churchSchema);
 
-export default churchSchema;
+export default Church;
