@@ -4,14 +4,14 @@ function Login(){
     return(
         <div className="LoginPage">
             <form className="LoginForm">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Username" className="userName"/>
+                <input type="password" placeholder="Password" className='password'/>
 
-                <button type="submit">Log In</button>
+                <button type="submit" className='Login-btn'>Log In</button>
 
-                <a href="">Forgotten Password?</a>
+                <a href="" className='forgotPassword'>Forgotten Password?</a>
 
-                <button type="button">Sign Up</button>
+                <button type="button" className='SignUp-btn'>Sign Up</button>
             </form>
         </div>
     )
