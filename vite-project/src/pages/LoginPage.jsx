@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import './LoginPage.css'
 
 function LoginPage() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const navigate = useNavigate()
 
     function handleEmail(e) {
         setEmail(e.target.value)
@@ -33,6 +37,10 @@ function LoginPage() {
         const data = await response.json()
 
         console.log(data)
+
+        if(data.status === "SUCCESSFUL"){
+            navigate('/home')
+        }
     }
     return(
         <div className="LoginPage">
@@ -44,10 +52,10 @@ function LoginPage() {
                 <a href="" className="ForgotPassword" >Forgot password?</a>
                 <hr className='Seperator'/>
             </form>
-                <button className="CreateNewAccount-btn">Create new account</button>
+                <button className="CreateNewAccount-btn" onClick={() => navigate('/SignUp')}>Create new account</button>
             </div>
         </div>
     )
 }
 
-export default LoginPage
+export default LoginPage 
