@@ -6,11 +6,12 @@ import User from "../model/User.js";
 
 export const signUp = async (req, res) => {
         try{
-        let {email, password} = req.body;
+        let {email, password, confirmPassword} = req.body;
         email = email.trim();
         password = password.trim();
+        confirmPassword = confirmPassword.trim();
 
-        if(email == "" || password == ""){
+        if(email == "" || password == "" || confirmPassword == ""){
             res.json({
                 status: "FAILED",
                 message: "Theres an empty field!"
@@ -20,7 +21,12 @@ export const signUp = async (req, res) => {
                 status: "FAILED",
                 message: "Email is not valid!"
             })
-        }else if(password.length > 8){
+        }else if(password !== confirmPassword){
+            res.json({
+                status: "FAILED",
+                message: "Password and confirm password not match"
+            })
+        }else if(password.length < 8){
             res.json({
             status: "FAILED",
             message: "Password is weak, should be higher than 8 character"
