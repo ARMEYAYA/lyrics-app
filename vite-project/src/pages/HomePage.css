@@ -1,0 +1,48 @@
+.HomePage{
+    padding: 30px;
+}
+.songTable{
+    display: grid;
+    grid-template-columns: 48% 48% ;
+    gap: 40px;
+
+}
+.songContainer{
+    background: yellow;
+    display: grid;
+    grid-template-columns: auto auto ;
+    justify-content: space-between; 
+    gap: 0px;
+    padding: 20px;
+}
+.songContainer > * {
+    margin: 0;
+}
+
+
+
+.composer{
+    font-size: 15px;
+    color: grey;
+}
+.songTitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+.chords{
+    display: flex;
+    gap: 8px;
+}
+.chords p {
+    margin: 0;
+}
+.chord{
+    background-color: grey;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+.chordsPlaceholder{
+    color: grey;
+    font-size: 14px;
+}

@@ -1,0 +1,18 @@
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 30px;
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.4);
+}
+.webTitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+.profileImage{
+    width:70px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
