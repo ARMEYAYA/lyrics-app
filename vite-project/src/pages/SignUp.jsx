@@ -46,9 +46,9 @@ function SignUp() {
         <div className="SignUpPage">
             <div className="SignUpContainer">
                 <form className="SignUpForm" onSubmit={handleSignUp}>
-                    <input className='usernameSignUp' type="text" onChange={handleSetemail}/>
-                    <input className='PasswordSignUp' type="text" onChange={handleSetPassword}/>
-                    <input className='ConfirmPasswordSignUp' type="text" onChange={handleSetConfirmPassword}/>
+                    <input className='usernameSignUp' type="text" placeholder='Email' onChange={handleSetemail}/>
+                    <input className='PasswordSignUp' type="text" placeholder='Password' onChange={handleSetPassword}/>
+                    <input className='ConfirmPasswordSignUp' type="text" placeholder='Confirm Password' onChange={handleSetConfirmPassword}/>
                     <button className='SignUp-btn'>Sign Up</button>
                 </form>
                     <hr className='Seperator'/>

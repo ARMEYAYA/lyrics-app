@@ -7,6 +7,14 @@ function HomePage(){
         <>
             <NavBar></NavBar>
             <div className="HomePage">
+                <div className="searchAndAddContainer">
+                    <form className="searchContainer">
+                        <input className="searchBar"></input>
+                        <button className="searchBtn">Search</button>
+                    </form>
+                    <button className="addChordsBtn">Add Chords</button>
+                </div>
+
                 <div className="songTable">
                     <div className="songContainer">
                         <p className="composer">Bandang Maangas</p>

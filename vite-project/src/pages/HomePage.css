@@ -3,7 +3,7 @@
 }
 .songTable{
     display: grid;
-    grid-template-columns: 48% 48% ;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 
 }
@@ -14,6 +14,7 @@
     place-items: center;
     gap: 0px;
     padding: 20px;
+    border-radius: 15px;
     box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
     -webkit-box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
     -moz-box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
@@ -70,4 +71,57 @@
 .bpm{
     color: grey;
     font-size: 14px;
+}
+.searchAndAddContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.searchContainer{
+    display: flex;
+}
+.searchBar{
+    height: 30px;
+    border: none;
+    width: 505px;
+    box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
+    -moz-box-shadow: 0px 0px 3px 2px rgba(196,196,196,0.75);
+    margin-right: 10px;
+    border-radius: 7px;
+}
+.searchBar:hover{
+    box-shadow: 0px 0px 4px 3px rgba(143,143,143,0.75);
+    -webkit-box-shadow: 0px 0px 4px 3px rgba(143,143,143,0.75);
+    -moz-box-shadow: 0px 0px 4px 3px rgba(143,143,143,0.75);
+}
+.searchBtn{
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1);
+    background-color: black;
+    color: white;
+}
+.searchBtn:hover{
+    background-color: rgb(243, 243, 243);
+    color: black;
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
+}
+.addChordsBtn{
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1);
+    background-color: black;
+    color: white;
+}
+.addChordsBtn:hover{
+    background-color: rgb(243, 243, 243);
+    color: black;
+    -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
 }
