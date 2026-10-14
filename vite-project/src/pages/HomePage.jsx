@@ -1,8 +1,17 @@
+import { useNavigate } from 'react-router-dom';
+
 import NavBar from "../components/NavBar";
+
 
 import './HomePage.css'
 
 function HomePage(){
+    const navigate = useNavigate();
+
+    function handleRenderAddSong(){
+        navigate('/addsong')
+    }
+
     return(
         <>
             <NavBar></NavBar>
@@ -12,7 +21,7 @@ function HomePage(){
                         <input className="searchBar"></input>
                         <button className="searchBtn">Search</button>
                     </form>
-                    <button className="addChordsBtn">Add Chords</button>
+                    <button className="addChordsBtn" onClick={handleRenderAddSong}>Add Chords</button>
                 </div>
 
                 <div className="songTable">
