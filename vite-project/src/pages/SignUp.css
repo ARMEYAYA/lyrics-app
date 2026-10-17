@@ -26,45 +26,18 @@
     height: 35px;
     margin-top: 15px;
     font-size: 14px;
-    border-radius: 4px;
-    border: none;
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1); 
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1);
-    padding-left: 10px;
-}
-.usernameSignUp:hover{
-    -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31); 
-    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
 }
 .PasswordSignUp{
     width: 343px;
     height: 35px;
     margin-top: 15px;
     font-size: 14px;
-    border-radius: 4px;
-    border: none;
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1); 
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1);
-    padding-left: 10px;
-}
-.PasswordSignUp:hover{
-    -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31); 
-    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
 }
 .ConfirmPasswordSignUp{
     width: 343px;
     height: 35px;
     margin-top: 15px;
     font-size: 14px;
-    border-radius: 4px;
-    border: none;
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1); 
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.1);
-    padding-left: 10px;
-}
-.ConfirmPasswordSignUp:hover{
-    -webkit-box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31); 
-    box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.31);
 }
 .SignUp-btn{
     width: 89%;

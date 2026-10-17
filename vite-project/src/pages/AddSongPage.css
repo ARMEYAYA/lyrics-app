@@ -1,0 +1,31 @@
+.songInfoField{
+    padding: 0px 30px 0px 30px;
+}
+.titleAndArtist{
+    display: flex;
+    width: 100%;
+    gap: 14px;
+}
+.titleAndArtist > div{
+    flex: 1;
+}
+.fieldTitle{
+    color: rgb(100, 100, 100);
+    font-size: 13px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.inputField{
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    font-size: 15px;
+}
+.performanceSetting{
+    display: flex;
+    width: 100%;
+    gap: 14px;
+}
+.performanceSetting > div{
+    flex: 1;
+}

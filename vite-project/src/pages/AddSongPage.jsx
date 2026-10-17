@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 
+import './AddSongPage.css';
 function AddSongPage(){
     return(
         <>
@@ -7,33 +8,33 @@ function AddSongPage(){
             <div className="songInfoField">
 
                 <div className="titleAndArtist">
-                    <div>
-                        <p>Title</p>
-                        <input type="text" />
+                    <div >
+                        <p className="fieldTitle">TITLE</p>
+                        <input className="inputField" type="text" />
                     </div>
 
                     <div>
-                        <p>ARTIST / COMPOSER</p>
-                        <input type="text" />
+                        <p className="fieldTitle">ARTIST / COMPOSER</p>
+                        <input className="inputField" type="text" />
                     </div>
                 </div>
 
                 <div className="performanceSetting">
                     <div>
-                        <p>ROOT KEY</p>
-                        <input type="text" />
+                        <p className="fieldTitle">ROOT KEY</p>
+                        <input className="inputField" type="text" />
                     </div>
                     <div>
-                        <p>CAPO POSITION</p>
-                        <input type="text" />
+                        <p className="fieldTitle">CAPO POSITION</p>
+                        <input className="inputField" type="text" />
                     </div>
                     <div>
-                        <p>TEMPO / BPM</p>
-                        <input type="text" />
+                        <p className="fieldTitle">TEMPO / BPM</p>
+                        <input className="inputField" type="text" />
                     </div>
                     <div>
-                        <p>TIME SIG</p>
-                        <input type="text" />
+                        <p className="fieldTitle">TIME SIG</p>
+                        <input className="inputField" type="text" />
                     </div>
                 </div>
             </div>
