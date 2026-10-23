@@ -42,6 +42,10 @@ function AddSongPage(){
             <div className="sectionAndLyrics">
                 <div className="songStructure"> 
                     <button className="AddSectionBtn">Add Section</button>
+                    <button className="SectionBtn">Chorus</button>
+                    <button className="SectionBtn">Verse</button>
+                    <button className="SectionBtn">Pre-Chorus</button>
+                    <button className="SectionBtn">Verse</button>
                 </div>
 
                 <h1>asda</h1>
