@@ -38,6 +38,14 @@ function AddSongPage(){
                     </div>
                 </div>
             </div>
+
+            <div className="sectionAndLyrics">
+                <div className="songStructure"> 
+                    <button className="AddSectionBtn">Add Section</button>
+                </div>
+
+                <h1>asda</h1>
+            </div>
         </>
     )
 }
