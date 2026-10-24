@@ -19,17 +19,16 @@ function LyricsField(){
     return(
         <div>
             <div className="LyricsPreview">
-                {lines.map((line, x) => (
-                        <div key={x}>
-                            {line.map((word, i) => (
-                                <span key={i}>
-                                    <span>{word.chord}</span>
-                                    <span>{word.text}</span>
-                                </span>
-                            ))}
-                        </div>
-                    ))
-                }
+              {lines.map((line, x) => (
+                <div key={x}>
+                    {line.map((word,i) => (
+                        <span key={i}>
+                            <span>{word.chord}</span>
+                            <span>{word.text}</span>
+                        </span>
+                    ))}
+                </div>
+              ))}
             </div>
             <div className="InputField">
 
