@@ -1,5 +1,5 @@
 import NavBar from "../components/common/NavBar";
-import LyricsInputField from "../components/section/LyricsInputField";
+import LyricsField from "../components/section/LyricsField";
 
 import './AddSongPage.css';
 function AddSongPage(){
@@ -50,7 +50,7 @@ function AddSongPage(){
                 </div>
 
                 <div className="lyricsSection">
-                    <LyricsInputField></LyricsInputField>
+                    <LyricsField></LyricsField>
                 </div>
             </div>
         </>
