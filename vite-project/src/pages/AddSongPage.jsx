@@ -1,4 +1,5 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/common/NavBar";
+import LyricsInputField from "../components/section/LyricsInputField";
 
 import './AddSongPage.css';
 function AddSongPage(){
@@ -48,7 +49,9 @@ function AddSongPage(){
                     <button className="SectionBtn">Verse</button>
                 </div>
 
-                <h1>asda</h1>
+                <div className="lyricsSection">
+                    <LyricsInputField></LyricsInputField>
+                </div>
             </div>
         </>
     )

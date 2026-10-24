@@ -1,6 +1,6 @@
 import './NavBar.css'
 
-import profile from '../assets/profile.png'
+import profile from '../../assets/profile.png'
 
 function NavBar (){
     return(
